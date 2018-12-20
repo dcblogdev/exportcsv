@@ -43,7 +43,7 @@ foreach($contacts as $row) {
 $records[] = ['name', 'last name', 'comy', 'created'];
 
 //send params to csv 
-new csv($headerFields, $records, $filename);
+new csv($records, $filename, $headerFields);
 ```
 
 Adapted from https://www.codexworld.com/export-data-to-csv-file-using-php-mysql/
