@@ -11,9 +11,8 @@ composer require daveismyname/exportcsv
 
 ### Usage
 
-Include the composer autoloader, import the Import namespace.
+Include the composer autoloader, import the ExportCsv namespace.
 
-Define your database file path and credentials, the last option `dropTables` when set to true will delete all the tables in the database before import the sql file.
 
 ```
 <?php
