@@ -10,20 +10,23 @@ class ExportCsv
 {
     /**
      * CSV export
-     * @param  array  $headerFields array of column names
      * @param  array  $records      array of records
      * @param  string $filename     name of the file including .csv
+     * @param  array  $headerFields array of column names
      * @param  string $delimiter    set the delimiter
      * @return download             csv file
      */
-    public function __construct(array $headerFields, array $records, string $filename, string $delimiter = ',')
+    public function __construct(array $records, string $filename, array $headerFields=[], string $delimiter = ',')
     {
         //create a file pointer
         $f = fopen('php://memory', 'w');
         
-        //set column headers
-        fputcsv($f, $headerFields, $delimiter);
-        
+        //check for header fields
+        if (!empty($headerFields)) {
+            //set column headers
+            fputcsv($f, $headerFields, $delimiter);
+        }
+
         foreach($records as $row) {
             //output each row of the data,
             fputcsv($f, array_values($row), $delimiter);
