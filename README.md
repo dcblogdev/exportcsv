@@ -1,9 +1,26 @@
 # Export CSV
 Export arrays to CSV
 
-Usage example:
+### Install
+
+Using composer include the repository by typing the following into a terminal
 
 ```
+composer require daveismyname/exportcsv
+```
+
+### Usage
+
+Include the composer autoloader, import the Import namespace.
+
+Define your database file path and credentials, the last option `dropTables` when set to true will delete all the tables in the database before import the sql file.
+
+```
+<?php
+require('vendor/autoload.php');
+
+use Daveismyname\ExportCsv\ExportCsv;
+
 //set filename
 $filename = 'test.csv';
 
@@ -24,7 +41,7 @@ foreach($contacts as $row) {
 }
 
 //send params to csv 
-csv($headerFields, $records, $filename);
+new csv($headerFields, $records, $filename);
 ```
 
 Adapted from https://www.codexworld.com/export-data-to-csv-file-using-php-mysql/
