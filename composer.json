@@ -1,0 +1,22 @@
+{
+  "name": "daveismyname/exportcsv",
+  "description": "Export array to CSV",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David Carr",
+      "email": "dave@daveismyname.com",
+      "homepage": "http://daveismyname.blog",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Daveismyname\\ExportCsv\\": "/"
+    }
+  },
+  "minimum-stability": "dev"
+}
