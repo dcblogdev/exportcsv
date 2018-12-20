@@ -16,7 +16,7 @@ class ExportCsv
      * @param  string $delimiter    set the delimiter
      * @return download             csv file
      */
-    public function __construct(array $records, string $filename, array $headerFields=[], string $delimiter = ',')
+    public function __construct(array $records, string $filename, array $headerFields = [], string $delimiter = ',')
     {
         //create a file pointer
         $f = fopen('php://memory', 'w');
