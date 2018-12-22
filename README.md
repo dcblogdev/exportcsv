@@ -14,7 +14,7 @@ composer require daveismyname/exportcsv
 Include the composer autoloader, import the ExportCsv namespace.
 
 
-```
+```php
 <?php
 require('vendor/autoload.php');
 
@@ -24,25 +24,25 @@ use Daveismyname\ExportCsv\ExportCsv;
 $filename = 'test.csv';
 
 //set column names
-$headerFields = array('First Name', 'Last Name', 'Company', 'Created');
+$headerFields = ['First Name', 'Last Name', 'Company', 'Created'];
 
 //create array
 $records = [];
 
 //loop through data and add to array
 foreach($contacts as $row) {
-    $records[] = array(
-        $row->firstName, 
-        $row->lastName, 
-        $row->companyName, 
+    $records[] = [
+        $row->firstName,
+        $row->lastName,
+        $row->companyName,
         $row->created_at
-    );
+    ];
 }
 
 //OR set an array manually
 $records[] = ['name', 'last name', 'comy', 'created'];
 
-//send params to csv 
+//send params to csv
 new csv($records, $filename, $headerFields);
 ```
 
