@@ -8,7 +8,7 @@ Export arrays to CSV
 Using composer include the repository by typing the following into a terminal
 
 ```
-composer require daveismyname/exportcsv
+composer require dcblogdev/exportcsv
 ```
 
 ### Usage
@@ -17,10 +17,7 @@ Include the composer autoloader, import the ExportCsv namespace.
 
 
 ```php
-<?php
-require('vendor/autoload.php');
-
-use Daveismyname\ExportCsv\ExportCsv;
+use Dcblogdev\ExportCsv\ExportCsv;
 
 //set filename
 $filename = 'test.csv';
