@@ -1,6 +1,6 @@
 <?php 
 
-namespace Daveismyname\ExportCsv;
+namespace Dcblogdev\ExportCsv;
 
 /**
  * Class to generate CSV from array
