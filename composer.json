@@ -1,12 +1,12 @@
 {
-  "name": "daveismyname/exportcsv",
+  "name": "dcblogdev/exportcsv",
   "description": "Export array to CSV",
   "license": "MIT",
   "authors": [
     {
       "name": "David Carr",
-      "email": "dave@daveismyname.com",
-      "homepage": "http://daveismyname.blog",
+      "email": "dave@dcblog.dev",
+      "homepage": "http://dcblog.dev",
       "role": "Developer"
     }
   ],
@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Daveismyname\\ExportCsv\\": "/"
+      "Dcblogdev\\ExportCsv\\": "/"
     }
   },
   "minimum-stability": "dev"
