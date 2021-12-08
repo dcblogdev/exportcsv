@@ -5,5 +5,41 @@
 
 Export arrays to CSV
 
-# Documentation and install instructions 
-[https://dcblog.dev/docs/lexportcsv](https://dcblog.dev/docs/lexportcsv)
+Install
+Using composer include the repository by typing the following into a terminal
+
+composer require dcblogdev/exportcsv
+ 
+## Usage
+
+Include the composer autoloader, import the ExportCsv namespace.
+
+```php
+use Dcblogdev\ExportCsv\ExportCsv;
+
+//set filename
+$filename = 'test.csv';
+
+//set column names
+$headerFields = ['First Name', 'Last Name', 'Company', 'Created'];
+
+//create array
+$records = [];
+
+//loop through data and add to array
+foreach($contacts as $row) {
+    $records[] = [
+        $row->firstName,
+        $row->lastName,
+        $row->companyName,
+        $row->created_at
+    ];
+}
+
+//OR set an array manually
+$records[] = ['name', 'last name', 'comy', 'created'];
+
+//send params to csv
+new csv($records, $filename, $headerFields);
+```
+
