@@ -40,6 +40,6 @@ foreach($contacts as $row) {
 $records[] = ['name', 'last name', 'comy', 'created'];
 
 //send params to csv
-new csv($records, $filename, $headerFields);
+new ExportCsv($records, $filename, $headerFields);
 ```
 
